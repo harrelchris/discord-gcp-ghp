@@ -38,7 +38,7 @@ gcloud functions deploy discord \
 
 ### Update URL in `index.html`
 
-Copy the URL displayed in the terminal and paste into `frontend/index.html`
+Copy the URL displayed in the terminal and paste into `docs/index.html`
 
 ```javascript
 // SET GCP FUNCTION URL
