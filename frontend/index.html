@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discord GCP GHP</title>
+</head>
+<body>
+  <h1>Form</h1>
+  <form id="form">
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" placeholder="John">
+    <input type="submit" value="Submit">
+  </form>
+  <script>
+    // SET GCP FUNCTION URL
+    const url = ""
+
+    const form = document.getElementById("form");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault()
+      const formData = new FormData(form)
+      const fromEntries = Object.fromEntries(formData.entries())
+      fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(fromEntries)
+      })
+        .then(res => res.json())
+        .then(data => {
+            alert("Submitted")
+            form.reset()
+        })
+        .catch(err => console.error(err))
+    })
+  </script>
+</body>
+</html>
