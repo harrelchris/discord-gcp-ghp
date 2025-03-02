@@ -7,7 +7,7 @@ HEADERS = {
     "Access-Control-Allow-Headers": "Content-Type",
 }
 
-WEBHOOK_URL = ""
+WEBHOOK_URL = "https://discord.com/api/webhooks/1343848262255251546/kYlb3klJl5-eQ-xUL3-qTxcmpaTGsNN51uEll7scSDiP7RcfUqgjygP01RBf3xDuoV7h"
 
 
 @functions_framework.http
